@@ -1,0 +1,180 @@
+/** Boilerplate reset*/
+
+/* Box sizing rules */
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
+
+/* Prevent font size inflation */
+html {
+  -moz-text-size-adjust: none;
+  -webkit-text-size-adjust: none;
+  text-size-adjust: none;
+}
+
+/* Remove default margin in favour of better control in authored CSS */
+body, h1, h2, h3, h4, p,
+figure, blockquote, dl, dd {
+  margin-block-end: 0;
+}
+
+/* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
+ul[role='list'],
+ol[role='list'] {
+  list-style: none;
+}
+
+/* Set core body defaults */
+body {
+  min-height: 100vh;
+  line-height: 1.5;
+}
+
+/* Set shorter line heights on headings and interactive elements */
+h1, h2, h3, h4,
+button, input, label {
+  line-height: 1.1;
+}
+
+/* Balance text wrapping on headings */
+h1, h2,
+h3, h4 {
+  text-wrap: balance;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+  text-decoration-skip-ink: auto;
+  color: currentColor;
+}
+
+/* Make images easier to work with */
+img,
+picture {
+  max-width: 100%;
+  display: block;
+}
+
+/* Inherit fonts for inputs and buttons */
+input, button,
+textarea, select {
+  font: inherit;
+}
+
+/* Make sure textareas without a rows attribute are not tiny */
+textarea:not([rows]) {
+  min-height: 10em;
+}
+
+/* Anything that has been anchored to should have extra scroll margin */
+:target {
+  scroll-margin-block: 5ex;
+}
+
+
+/** End of boilerplate reset*/
+
+/** Global styles, changes and variables*/
+
+:root{
+    --green:hsl(75, 94%, 57%);
+    --white: hsl(0, 0%, 100%);
+    --grey: hsl(0, 0%, 20%);
+    --dark-grey: hsl(0, 0%, 12%);
+    --off-black: hsl(0, 0%, 8%);
+}
+
+
+body{
+    background: var(--off-black);
+    font-family: "Inter", sans-serif;
+    font-weight: 400;
+    display: flex;
+    align-items: center;
+}
+
+p{
+    font-size: 14px;
+}
+
+/** Card sizing and styling*/
+
+main.container{
+    margin: 0 auto;
+    height: fit-content;
+    max-width: 400px;
+    min-width: 350px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: var(--dark-grey);
+    padding: 1.5em 2em;
+    color: var(--white);
+    border-radius: 20px;
+}
+
+/** Profile Picture */
+figure{
+    display: flex;
+    justify-content: center;
+}
+
+img.profile-pic{
+    width: 70%;
+    border-radius: 50%;
+}
+
+/** Key info */
+.profile-name{
+    font-size: 1.7rem;
+    font-weight: 600;
+}
+
+.location{
+    font-size: 0.9rem;
+    font-weight: 600;
+    color: var(--green);
+}
+
+.tagline{
+    font-size: 0.875rem;
+    margin-top: 40px;
+    color: hsl(0, 0%, 80%);
+}
+
+/** Social media links */
+
+.social-links ul{
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
+}
+
+.social-links li{
+    display: inline;
+    background-color: var(--grey);
+    margin: 10px 0;
+    padding: 15px 20px;
+    width: 300px;
+    border-radius: 10px;
+}
+
+.social-links li:hover{
+    background-color: var(--green);
+    color: var(--off-black);
+    cursor: pointer;
+    transition: 0.3s ease-in-out;
+}
+
+.social-links a:link{
+    text-decoration: none;
+    font-weight: 700;
+    text-align: center;
+}
+
